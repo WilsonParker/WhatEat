@@ -1,0 +1,86 @@
+#wrap {width:100%;}
+
+#wrap    #Header {display:none;}
+#wrap      #gps_barPC {display:none;}
+
+#wrap    #gps_bar {width:100%; text-align:center; background-color:#3f3f3f; height:35px; line-height:35px; overflow:hidden;}
+#wrap    #gps_bar #contain1 {max-width:960px;}
+#wrap     #gps_bar p {color:#ffffff; font-size:0.8em; padding:0 10px;}
+#wrap    .tdL{float:left;}
+#wrap    .tdR{float:right; }
+
+#wrap      #hearder {width:100%; text-align:center; position:relative; border-bottom:1px solid #cccccc;}
+#wrap     #hearder #contain2 {max-width:960px;}
+
+        /* div 가운데 놓는 기술 */
+        /* 1. 부모 요소에 position:relative; + 해당 요소에 position:absolute;
+           2. 해당 요소에 left:50% + width:200px;(임의의 길이 지정) + margin-left:-(width/2)(가로 길이의 절반) */
+#wrap    #logo {position:absolute; top:15px; left:50%; width:200px; margin-left:-100px;}
+
+#wrap     #logo_bar {height:50px; line-height:50px; }
+#wrap   .menu_bt {padding:0 10px;}
+
+#wrap   #body {width:100%; background-color:#fafafa; padding-bottom:25px;}
+#wrap   #body #contain3 {max-width:960px; overflow:hidden;}
+#wrap    .tr {overflow:hidden;}
+#wrap   .tdLeft50 {float:left; width:50%; padding:10px 5px 0 10px;}
+#wrap   .tdRight50 {float:left; width:50%; padding:10px 10px 0 5px;}
+
+#wrap    .box {background-color:#ffffff; height:220px; border:1px solid #cccccc; position:relative; }
+#wrap   .box div {width:100%; height:218px; padding:15px;}
+#wrap   .box img {position:absolute; right:0px;}
+
+#wrap    #footer {background-color:#ededed;height:230px;}
+#wrap     #footer #containFooter {max-width:960px; padding-top:20px;}
+#wrap    .trFooter {overflow:hidden; padding-left:10px;} 
+
+
+
+        /* Tablet Device */
+        @media all and (min-width:768px) and (max-width:1024px) {
+
+        }
+
+        /* Desktop Device */
+        /* @media all and (min-width:1025px) { */
+        @media all and (min-width:512px) {
+#wrap      #gps_bar {display:none;}
+#wrap       #hearder {display:none;}
+
+            /* PC Header Start*/
+#wrap      #Header {display:block; width:100%; background-color:#3f3f3f; height:80px;}
+#wrap      .containHeader {max-width:960px; overflow:hidden; padding-top:20px;}
+#wrap     .leftHeader {float:left; padding-top:10px; color:#ffffff; margin-left:10px;} 
+#wrap     .rightHeader {float:right; width:100px; height:40px; border:1px solid #ffffff; line-height:40px; text-align:center; color:#ffffff; margin-right:10px;}
+#wrap     .rightHeader2 {float:right; width:200px; height:40px; border:1px solid #ffffff; line-height:40px; text-align:center; color:#ffffff; margin-right:10px;}
+            /* PC Header End*/
+
+#wrap      #gps_barPC {display:block; width:100%; height:250px;}
+#wrap      .containPC2 {max-width:960px; text-align:center; margin:0 auto; padding-top:50px; position:relative;}
+#wrap      .containPC2 h1 {color:#ffffff;}
+#wrap      .containPC2_Login {max-width:960px; text-align:center; margin:25px auto; padding-top:50px; position:relative;}
+#wrap      .containPC2_Login div {display:inline; margin:10px; padding:10px; background-color:white; cursor:pointer; font-weight:bolder;}
+#wrap .containPC2 .search {width:300px; height:40px; border:1px solid #000000; background:#ffffff; position:absolute; left:50%; margin-left:-175px;}
+#wrap .containPC2 .bt {width:50px; height:40px; border:1px solid #000000; background:#3f3f3f; line-height:40px; color:#ffffff; position:absolute; left:50%; margin-left:130px;}
+#wrap .containPC2 input {border:0px; width:100%; padding:0 10px; margin-top:10px;}
+
+#wrap #body {width:100%; background-color:#fafafa; padding-bottom:25px;}
+#wrap #body #contain3 {max-width:960px; overflow:hidden;}
+#wrap .td25_1 {float:left; width:25%; padding:10px 5px 0 10px;}
+#wrap .td25_2_3 {float:left; width:25%; padding:10px 5px 0 5px;}
+#wrap .td25_4 {float:left; width:25%; padding:10px 10px 0 5px;}
+
+#wrap .box {background-color:#ffffff; height:220px; border:1px solid #cccccc; position:relative;}
+#wrap .box div {width:100%; height:218px; padding:15px;}
+#wrap .box img {position:absolute; right:0px;} 
+
+            /* PC Footer Start*/
+#wrap #footer {background-color:#ededed;height:230px;}
+#wrap #footer #containFooter {max-width:960px; padding-top:20px;}
+#wrap .trFooter {overflow:hidden; padding-left:10px;} 
+            /* PC Footer End*/
+        } 
+        
+ #wrapN{width:100%; height:40%;min-height:150px;background-color:#fafafa;}
+ #wrapN .topPadding {width:90%; max-width:500px; height:20px;}
+ #wrapN #contain {width:90%; max-width:500px; background-color:#ffffff; border:1px solid #000000; padding:30px;}

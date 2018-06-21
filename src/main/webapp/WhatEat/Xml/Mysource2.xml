@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mysource>
+	<DB-name>jdbc</DB-name>
+	<DB-auth>Container</DB-auth>
+	<DB-type>javax.sql.DataSource</DB-type>
+	<!-- <DB-url>umj64-001.cafe24.com/WebMysql</DB-url> -->
+	<DB-url>jdbc:mysql://localhost:3306</DB-url>
+	<DB-driverClassName>com.mysql.jdbc.Driver</DB-driverClassName>
+	<useDB>maker2302</useDB>
+	<userName>maker2302</userName>
+	<userPW>unknown4408@</userPW>
+	<jdbc>java:comp/env/jdbc/webdbpool</jdbc>
+	<web-path>/WEB-INF/web.xml</web-path>
+	<context-path>/META-INF/context.xml</context-path>
+	
+	<upLoadRealPath>/home/hosting_users/maker2302/tomcat/webapps/ROOT/</upLoadRealPath>
+	<deletedRealPath>Deleted/</deletedRealPath>
+	<upLoadPath1>WhatEat/images/Storage/</upLoadPath1>
+	<upLoadPath2>WhatEat/images/StoreIMG/</upLoadPath2>
+	<upLoadPath3>WhatEat/images/Category/</upLoadPath3>
+	<FileSize>5</FileSize>
+	<limit>10</limit> 
+	<limit2>5</limit2> 
+	<bNum>5</bNum>
+	
+	<View_MainPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Home/View_</View_MainPath>
+	<View_MyPagePath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Home/View_MyPage.jsp?View2=</View_MyPagePath>
+	<View_ServicePath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Service/View_Service_Page.jsp?View3=</View_ServicePath>
+	<View_CategoryPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Home/View_Category.jsp?View4=</View_CategoryPath>
+	<View_BoardPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Board/View_Board_</View_BoardPath>
+	<View_MemberPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Member/View_Member_</View_MemberPath>
+	<View_SellerPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Seller/View_Seller_</View_SellerPath>
+	<View_FoodPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Food/View_Food_</View_FoodPath>
+	<View_StarPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Star/View_Star_</View_StarPath>
+	<View_AdminPath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Admin/View_Admin_</View_AdminPath>
+	<View_StorePath>/WhatEat/Home/View_Main.jsp?View=/WhatEat/Store/View_Store_</View_StorePath>
+	<View_ServicePath2>/WhatEat/Service/View_Service_</View_ServicePath2>
+	<View_MemberPath2>/WhatEat/Member/View_Member_</View_MemberPath2>
+	<View_SellerPath2>/WhatEat/Seller/View_Seller_</View_SellerPath2>
+	<View_BoardPath2>/WhatEat/Board/View_Board_</View_BoardPath2>
+	<View_StarPath2>/WhatEat/Star/View_Star_</View_StarPath2>
+	<View_StorePath2>/WhatEat/Store/View_Store_</View_StorePath2>
+	<View_AdminPath2>/WhatEat/Admin/View_Admin_</View_AdminPath2>
+	<View_FoodPath2>/WhatEat/Food/View_Food_</View_FoodPath2>
+	
+	<ListSequenceCommand>select max(%s) from %s where %s = %d</ListSequenceCommand>
+	<DetailCommand>select * from %s where %s = %s</DetailCommand>
+	<MaxNum>select max(%s) from %s</MaxNum>
+	<DeleteCommand>delete from %s where %s = %d</DeleteCommand>
+	<showColumn>select * from </showColumn>
+	<CountUpdateCommand>update %s set %s = %s+%d where %s = %d</CountUpdateCommand>
+	<LoginCommand>select INFO_PASSWORD from USER where INFO_ID = binary("%s")</LoginCommand>
+	<getInfo>select * from %s where INFO_ID = "%s"</getInfo>
+	<getColumns>select * from %s limit 0, 1</getColumns>
+	<getLastInsert>select last_insert_id()</getLastInsert>
+	<getGinfo>select * from %s where INFO_POSITION = "%s" order by INFO_INDEX asc</getGinfo>
+	<createGuestData>INSERT INTO USER(INFO_NAME,INFO_ID,INFO_PASSWORD,INFO_BIRTH,INFO_POSITION,INFO_ADDSTORE_RG,INFO_MODSTORE_RG,INFO_DELSTORE_RG,INFO_EMAIL,INFO_PHONENUM) VALUE('사용자_"+prn+"','user"+prn+"','123','930506','10111110','FALSE','FALSE','FALSE','abc@asdf.com','010-1234-7890')</createGuestData>
+	
+	<Star_Condition1>STAR_INDEX</Star_Condition1>
+	<Star_Condition2>STAR_NUM</Star_Condition2>
+	<Star_Condition3>STAR_STORE_NUM</Star_Condition3>
+	<Food_Condition1>FOOD_NUM</Food_Condition1>
+	<Food_Condition2>MENU_NUM</Food_Condition2>
+	<Food_Condition3>FOOD_INDEX</Food_Condition3>
+	<Food_Condition4>MENU_INDEX</Food_Condition4>
+	<Food_Condition5>MENU_NAME</Food_Condition5>
+	<Food_Condition6>FOOD_NAME</Food_Condition6>
+	<Food_Condition7>FOOD_PRICE</Food_Condition7>
+	<Board_Condition1>BOARD_KIND</Board_Condition1>
+	<Board_Condition2>BOARD_SEQUENCE</Board_Condition2>
+	<Board_Condition3>BOARD_NUM</Board_Condition3>
+	<Board_Condition4>BOARD_COMMENTTOTAL</Board_Condition4>
+	<Board_Condition5>BOARD_READCOUNT</Board_Condition5>
+	<Board_Condition6>BOARD_FILE</Board_Condition6>
+	<Store_Condition1>STORE_INDEX</Store_Condition1>
+	<Store_Condition2>STORE_NUM</Store_Condition2>
+	<Store_Condition3>STORE_KIND</Store_Condition3>
+	<Store_Condition4>STORE_READCOUNT</Store_Condition4>
+	<Store_Condition5>STORE_REVIEWER</Store_Condition5>
+	<Store_Condition6>STORE_SCORE</Store_Condition6>
+	<Store_Condition7>STORE_LOCATION1</Store_Condition7>
+	<Store_Condition8>STORE_LOCATION2</Store_Condition8>
+	<Store_Condition9>STORE_LOCATION3</Store_Condition9>
+	<Store_Condition10>STORE_DATE</Store_Condition10>
+	<User_Condition1>INFO_INDEX</User_Condition1>
+	<User_Condition2>INFO_PHONENUM</User_Condition2>
+	<User_Condition3>INFO_PASSWORD</User_Condition3>
+	<User_Condition4>INFO_ID</User_Condition4>
+	<User_Condition5>INFO_BIRTH</User_Condition5>
+	<User_Condition6>INFO_NAME</User_Condition6>
+	<Comments_Condition1>COMMENTS_KIND_BOARD</Comments_Condition1>
+	<Comments_Condition2>COMMENTS_KIND_STORE</Comments_Condition2>
+	<Comments_Condition3>COMMENTS_NUM</Comments_Condition3>
+	<Comments_Condition4>COMMENTS_SUBTOTAL</Comments_Condition4>
+	<Comments_Condition5>COMMENTS_SUBNUM</Comments_Condition5>
+	<Category_Condition1>CATEGORY_INDEX</Category_Condition1>
+	<Category_Condition2>CATEGORY_FILE</Category_Condition2>
+	<Grade_Condition1>GRADE_NUM</Grade_Condition1>
+	
+	<usedTable1>CATEGORY</usedTable1>
+	<usedTable2>STORE</usedTable2>
+	<usedTable3>MENU</usedTable3>
+	<usedTable4>FOOD</usedTable4>
+	<usedTable5>BOARD</usedTable5>
+	<usedTable6>COMMENTS</usedTable6>
+	<usedTable7>GRADE</usedTable7>
+	<usedTable8>MILEAGE_HISTORY</usedTable8>
+	<usedTable9>THEME</usedTable9>
+	<usedTable10>STAR</usedTable10>
+	<usedTable11>USER</usedTable11>
+	
+	<MS_Condition1>INDEX</MS_Condition1>
+	<MS_Condition2>NUM</MS_Condition2>
+	<MS_Condition3>SEQUENCE</MS_Condition3>
+	<MS_Condition4>READCOUNT</MS_Condition4>
+	<MS_Condition5>KIND</MS_Condition5>
+	<MS_Condition6>FILE,PROFILE</MS_Condition6>
+	<MS_Condition7>BOARD,STORE</MS_Condition7>
+	<MS_Condition8>MEMBER,SELLER</MS_Condition8>
+	<MS_Condition9>_RG</MS_Condition9>
+	<MS_Condition10>PROFILE</MS_Condition10>
+	<MS_Condition11>CATEGORY</MS_Condition11>
+	
+	<Bean1>CATEGORY_Bean</Bean1>
+	<Bean2>STORE_Bean</Bean2>
+	<Bean3>MENU_Bean</Bean3>
+	<Bean4>FOOD_Bean</Bean4>
+	<Bean5>BOARD_Bean</Bean5>
+	<Bean6>COMMENTS_Bean</Bean6>
+	<Bean7>GRADE_Bean</Bean7>
+	<Bean8>MILEAGE_HISTORY_Bean</Bean8>
+	<Bean9>THEME_Bean</Bean9>
+	<Bean10>STAR_Bean</Bean10>
+	<Bean11>MEMBER_Bean</Bean11>
+	<Bean12>SELLER_Bean</Bean12>
+	<Bean13>INFO_POSITION_Bean</Bean13>
+	
+	<position_member>10111110</position_member>
+	<position_seller>11001110</position_seller>
+	<position_admin>10101101</position_admin>
+	
+	<black_phone></black_phone>
+	<black_birth></black_birth>
+</Mysource>

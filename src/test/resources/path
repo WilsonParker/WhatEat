@@ -1,0 +1,24 @@
+	studyRoom
+	<web-path>D:/Workspace_Total/Team_Ah/src/main/webapp/WEB-INF/web.xml</web-path>
+	<context-path>D:/Workspace_Total/Team_Ah/src/main/webapp/META-INF/context.xml</context-path>
+	
+	<upLoadRealPath>D:/Workspace_Total/Team_Ah/src/main/webapp/</upLoadRealPath>
+	<deletedRealPath>D:/Workspace_Total/Team_Ah/src/main/webapp/Deleted/</deletedRealPath>
+	
+	------------------------------ ------------------------------
+	
+	<web-path>D:/java/workspace1/Team_Ah/src/main/webapp/WEB-INF/web.xml</web-path>
+	<context-path>D:/java/workspace1/Team_Ah/src/main/webapp/META-INF/context.xml</context-path>
+	
+	<upLoadRealPath>D:/java/workspace1/Team_Ah/src/main/webapp/</upLoadRealPath>
+	<deletedRealPath>D:/java/workspace1/Team_Ah/src/main/webapp/Deleted/</deletedRealPath>
+	
+	------------------------------ ------------------------------
+	<web-path>/WEB-INF/web.xml</web-path>
+	<context-path>/META-INF/context.xml</context-path>
+	
+	<upLoadRealPath>/</upLoadRealPath>
+	<deletedRealPath>Deleted/</deletedRealPath>
+	<upLoadPath1>/home/hosting_users/maker2302/tomcat/webapps/ROOT/images/Storage</upLoadPath1>
+	<upLoadPath2>/home/hosting_users/maker2302/tomcat/webapps/ROOT/images/StoreIMG</upLoadPath2>
+	<upLoadPath3>/home/hosting_users/maker2302/tomcat/webapps/ROOT/images/Category</upLoadPath3>

@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>64</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Main Page
+bg=orange
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>64</y>
+      <w>40</w>
+      <h>904</h>
+    </coordinates>
+    <panel_attributes>lt=.
+group=1</panel_attributes>
+    <additional_attributes>24;888;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>104</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>회원 가입
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1224</x>
+      <y>136</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>로그인
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>168</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>아이디 찾기
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>200</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>비밀번호 찾기
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>312</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>대분류 (카테고리)
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>344</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>장바구니
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>704</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>고객센터
+bg=green
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>96</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>120</y>
+      <w>952</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>936;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>152</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>184</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>296</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>328</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>288</x>
+      <y>688</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=5</panel_attributes>
+    <additional_attributes>112;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>192</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>로그아웃
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>176</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>88</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>56;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>104</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>가입 약관 및 가입 Form 및 완료
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>152</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>56;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>168</y>
+      <w>136</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>아이디 찾기 Form 및 완료
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>512</x>
+      <y>200</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>비밀번호 찾기 Form 및 완료
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>184</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>56;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>296</y>
+      <w>64</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>48;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>528</x>
+      <y>312</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>소분류
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>584</x>
+      <y>296</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>56;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>640</x>
+      <y>312</y>
+      <w>144</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>클릭한 정보 List 출력
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>296</y>
+      <w>64</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>48;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>808</x>
+      <y>312</y>
+      <w>136</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>클릭한 상품 정보 출력
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>312</y>
+      <w>40</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>24;528;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>944</x>
+      <y>368</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>리뷰
+bg=blue
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>352</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=2</panel_attributes>
+    <additional_attributes>96;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>384</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=3</panel_attributes>
+    <additional_attributes>96;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>944</x>
+      <y>400</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>상품 문의
+bg=blue
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>344</y>
+      <w>40</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>24;216;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>432</y>
+      <w>480</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>24;24;464;24</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>608</x>
+      <y>440</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>장바구니 넣기</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>456</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=6</panel_attributes>
+    <additional_attributes>96;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>944</x>
+      <y>472</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>결제하기
+bg=blue
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>160</y>
+      <w>872</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+fg=red</panel_attributes>
+    <additional_attributes>856;24;384;24;384;256;24;256</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>136</y>
+      <w>48</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>32;528;24;24</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>600</x>
+      <y>400</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>로그인 안됬을시 이동</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1000</x>
+      <y>456</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=7</panel_attributes>
+    <additional_attributes>72;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1072</x>
+      <y>472</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>결제 창 및 결제 완료
+bg=blue
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>472</y>
+      <w>480</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>464;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>576</x>
+      <y>480</y>
+      <w>176</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>장바구니안에 있는 상품내용 보기</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>216</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=8</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>232</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>내 정보
+bg=blue
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>256</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=9</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>272</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>회원 탈퇴
+bg=blue
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>312</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>장바구니
+bg=blue
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>296</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=10</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>336</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=11</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>352</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>고객 센터
+bg=blue
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>376</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+group=12</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1328</x>
+      <y>392</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>게시판 및 댓글 달기
+bg=blue
+group=12</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>504</x>
+      <y>752</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>문의하기
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>456</x>
+      <y>392</y>
+      <w>352</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+fg=red</panel_attributes>
+    <additional_attributes>336;24;336;320;24;320</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>576</x>
+      <y>696</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>로그인 안됬을시 이동</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>704</y>
+      <w>40</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>24;136;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>736</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>504</x>
+      <y>784</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>QNA
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>768</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;</panel_attributes>
+    <additional_attributes>88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>56</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Main Page
+에서 바로 가는 페이지
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>96</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>그 후에 가는 페이지
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>880</x>
+      <y>160</y>
+      <w>120</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+fg=red</panel_attributes>
+    <additional_attributes>104;24;104;200;24;200;24;320</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>232</x>
+      <y>48</y>
+      <w>1280</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>회원 관리</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>808</x>
+      <y>288</y>
+      <w>472</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>상품 관리</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>304</x>
+      <y>344</y>
+      <w>472</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>장바구니</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

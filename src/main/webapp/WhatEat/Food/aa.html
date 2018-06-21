@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+$(function(){
+	function post_to_url(path, params, method) { method = method || "post";  //method 부분은 입력안하면 자동으로 post가 된다.
+		var Fm = document.createElement("form"); Fm.setAttribute("method", method); Fm.setAttribute("action", path); for(var key in params) {
+		var Hf = document.createElement("input"); Hf.setAttribute("type", "hidden"); Hf.setAttribute("name", key); Hf.setAttribute("value", params[key]); Fm.appendChild(Hf); } document.body.appendChild(Fm); Fm.submit(); }
+		
+		$("#BB1 input").on("click",function(){
+			//if($(this).parent().attr("id")=="BB1"){ var name = $("#act1 [name=name]").val(); var id = $("#act1 [name=id]").val(); var password = $("#act1 [name=password]").val();	 //각각의 값을 저장
+		    var id = $("#act1 [name=id]").val(); var password = $("#act1 [name=password]").val();
+            if(id == "" && password == "") { document.getElementById("id_s").innerHTML = "<b style='color:red'>Didn't ID is entered</b>"; document.getElementById("pw_s").innerHTML = "<b style='color:red'>Didn't PW is entered</b>"; }
+            else if(password == "" && id != "") { document.getElementById("pw_s").innerHTML = "<b style='color:red'>Didn't PW is entered</b>"; document.getElementById("id_s").innerHTML = ""; }
+            else if(id == "" && password != "") { document.getElementById("id_s").innerHTML = "<b style='color:red'>Didn't ID is entered</b>"; document.getElementById("pw_s").innerHTML = "";}
+            
+            else{
+                document.getElementById("id_s").innerHTML = "";document.getElementById("pw_s").innerHTML = "";
+			switch($(this).attr("name")){
+				case 'b1': $.ajax({url:'/Brain/SignUp', type:"post", data: {'id':id,'password':password}, success: function(){alert("Successfully Sign Up");$("#act1").submit();}}); break;
+				case 'b2': post_to_url('/Brain/SignUp', {'id':id,'password':password},"post"); break;
+				case 'b3': post_to_url('/Brain/SignUp', {'id':id,'password':password},"post"); break;
+				case 'b4': break; 
+				case 'b5': $.ajax({url:'/Brain/SignUp', type:"post", data: {'id':id,'password':password}, success:$("#act1").submit()}); break;
+				default: break;
+				};
+            }
+	});
+});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

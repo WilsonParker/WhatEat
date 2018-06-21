@@ -1,0 +1,4688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>805</x>
+      <y>609</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+Member
+
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>868</x>
+      <y>434</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>회원관리
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1155</x>
+      <y>651</y>
+      <w>259</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>DAO
+--
+--
++logIn(String id,password,HttpSession session); boolean
+-loginKeep(String keep);boolean
+-isAdmin(int position);boolean
+-isSeller(int position); boolean
+-idCheck(id);boolean
++logOut(String id,HttpSession session); boolean
++addMember(Map);boolean
++delteMember(String id,String password);
++searchID(name,jumin),(name,email),(name,phoneNum);id
++searchPassword(id,name,jumin),(id,name,email),(id,name,phoneNum);password
++searchZipcode(zipcode);zipcode
++memberListAdmin(startpage,endpage,limit);MemberVO -&gt;Arraylist
++memberDetailAdmin(id);MemberVO
++memberModifyAdmin(map);MemberVO
++addFood(Map);
++deleteFood(name);
++foodDetail(index);FoodVO
++foodModify(FoodVO);
++foodListSeller(seller);FoodVO
++foodList(classification1,classification2,startpage,endpage,limit);FoodVO
++paymendt(
++paymentbar(
++review(index,startpage,endpage);DTO
++inquiry(index,startpage,endpage);DTO
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>777</x>
+      <y>707</y>
+      <w>161</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>MemberVO
+--
+-id:String
+-password:String
+-name:String
+-age:int
+-email1:String
+-email2:String
+-jumin1:String
+-jumin2:String
+-gender:int
+-phoneNum1:String
+-phoneNum2:String
+-account:HashTable&lt;String bank,String accNum&gt;
+-adress1:String
+-adress2:String
+-zipcode:String
+-Grade:String
+-position:String
+-joinDate:Date
+--
++set();
++get();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>819</x>
+      <y>616</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1456</x>
+      <y>938</y>
+      <w>245</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>LogIn
+--
+-Mover
+-id:String
+-password:String
+-session:HttpSession
+-cookies:Cookie[]
+--
++operate(Command's parameter);Mover
+DAO.LogIn(String id,String password,session);boolean
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1820</x>
+      <y>1218</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Servlet&gt;&gt;
+Controller
+--
+-WSIgo:String
+-Path:String
+-session:HttpSession
+-dao:DAO
+-mover:Mover
+-command:Command
+
+--
+bg=blue
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2065</x>
+      <y>763</y>
+      <w>364</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Command
+--
+--
++operate(request,response,session,DAO);Mover
+
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1554</x>
+      <y>875</y>
+      <w>2022</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>2009;21;686;21;21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1113</x>
+      <y>560</y>
+      <w>62</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>49;91;49;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>987</x>
+      <y>462</y>
+      <w>231</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>데이터 베이스가 없거나
+데이터베이스에 한번만 접근하고 그 내용들을
+DTO에 저장할 때 사용한다</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1582</x>
+      <y>1232</y>
+      <w>147</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Mover
+--
+-path:String
+-Redirect:boolean
+--
++isRedirect();Boolean
++setRedirect(boolean);
++getPath();String
++setPath(String);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1708</x>
+      <y>938</y>
+      <w>182</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>LogOut
+--
+-Mover
+-id:String
+-session:HttpSession
+--
++operate(Command's parameter);Mover
+DAO.LogOut(String id,session);boolean
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1897</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberShip
+--
+-Mover
+-id:String
+-session:HttpSession
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.addMember(Map);boolean
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>987</x>
+      <y>504</y>
+      <w>147</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>DTO
+--
+-member:MemberVO
+-foods:FoodsVO
+-review:ReviewVO
+-Mtable:Hashtable
+-Ftable:Hashtable
+-Rtable:Hashtable
+-dao:DAO
+--
++addMember(String id,Member);
++getMember(String id);Member
++getMemberSize();int
++addFood(String seller,Food);
++getFood(String name);Food
++getFoodSize();int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1708</x>
+      <y>1253</y>
+      <w>125</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;21;112;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>665</y>
+      <w>538</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>21;42;21;21;525;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>861</x>
+      <y>553</y>
+      <w>34</w>
+      <h>167</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>21;154;21;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1519</x>
+      <y>504</y>
+      <w>259</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>UtilsVO
+--
+--
+S+setVO(MemberVo,ResultSet);MemberVO
+S+setVO(Map);MemberVO
+S+setDAO(MemberVo's All fields);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2233</x>
+      <y>791</y>
+      <w>34</w>
+      <h>118</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;105</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>427</y>
+      <w>881</w>
+      <h>1910</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>21;1897;28;952;42;21;203;21;420;21;756;21;868;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>924</x>
+      <y>392</y>
+      <w>11003</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10990;21;2422;49;1491;49;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1113</x>
+      <y>525</y>
+      <w>419</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>406;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1519</x>
+      <y>574</y>
+      <w>259</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>setVO&gt;&gt;
+VO에 rs를 set메소드로 넣고 리턴
+Parameters를 Map에 저장시킨것을 받고 VO에 넣고 리턴
+setDAO&gt;&gt;
+MemberVO 정보를 DB에 저장</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1456</x>
+      <y>1176</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Annotation&gt;&gt;
+Member_Path
+--
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1540</x>
+      <y>1337</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>UtilsANT
+--
+-list:Set
+-reflection:Reflection
+--
+S+getMember(String WSIgo); Command
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1708</x>
+      <y>1274</y>
+      <w>125</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>21;91;84;91;84;21;112;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1484</x>
+      <y>1190</y>
+      <w>69</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;175;56;175</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1540</x>
+      <y>1400</y>
+      <w>189</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>getMember&gt;&gt;
+Controller 에서 String WSIgo 를 받아서
+해당하는 객체를 만들어서 리턴한다</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1393</x>
+      <y>546</y>
+      <w>139</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>126;21;49;21;49;161;21;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1043</x>
+      <y>1043</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>ConnectDB
+--
+-conn:Connection
+-stmt:Statement
+--
+S+ConnectCon();Connection
+S+ConnectStmt();Statement
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1043</x>
+      <y>1127</y>
+      <w>161</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>UtilsProperties
+--
+-prop:Properties
+-propSet:Set&lt;Object&gt;
+-propPath:String
+-area:String
+--
+S+LoadProp();
+S+getValue(String key);String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1050</x>
+      <y>1085</y>
+      <w>34</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>21;42;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1085</x>
+      <y>966</y>
+      <w>139</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>21;77;21;42;126;42;126;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1043</x>
+      <y>1218</y>
+      <w>161</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>LoadProp&gt;&gt;
+Properties 를 읽고 PropSet 에 저장
+getValue&gt;&gt;
+propSet에서 해당하는 값을 리턴
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>924</x>
+      <y>1127</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DB&gt;&gt;
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>994</x>
+      <y>1134</y>
+      <w>62</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;21;49;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>945</x>
+      <y>1057</y>
+      <w>111</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>21;70;21;21;98;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>868</x>
+      <y>399</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>상품관리
+
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>868</x>
+      <y>364</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>쇼핑하기
+
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>777</x>
+      <y>966</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>email &gt;&gt; @를 기준으로 나눔
+jumin &gt;&gt; -를 기준으로 나눔
+account &gt;&gt; 은행,계좌번호
+zipcode &gt;&gt; 우편번호
+adress &gt;&gt; 시구 와 동호수 등으로 나눔
+Grade&gt;&gt; 일반,골드,vip 등을 숫자로 나타냄
+position: 관리자,일반,판매자</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2072</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberOut
+--
+-Mover
+-id:String
+-password:String
+-session:HttpSession
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.deleteMember(Map);boolean
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1771</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1960</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2135</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2247</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>searchID
+--
+-Mover
+-name:String
+-jumin:String
+-email:String
+-phoneNum:String
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.searchID(Map);id
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2422</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>searchPassword
+--
+-Mover
+-id:String
+-name:String
+-jumin:String
+-email:String
+-phoneNum:String
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.searchID(Map);password
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2310</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2492</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1155</x>
+      <y>959</y>
+      <w>259</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>searchID,Password의 실질적인 파라미터는 Map 으로 받으면
+되고 거기서 위에 지정된 파라미터로 분류한다는 뜻</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2947</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberDetail
+--
+-Mover
+-id:String
+--
++operate(Command's parameter);Mover
+DAO.memberDetail(id);VO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2772</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberModify
+--
+-Mover
+-password:String
+-phoneNum:String
+-email:String
+-account:HashTable
+-zipcode:String
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.memberModify(map);VO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3010</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2842</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2597</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>searchZipcode
+--
+-Mover
+-zipcode:String
+--
++operate(Command's parameter);Mover
+DAO.searchZipcode(zipcode);zipcode
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2667</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3122</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberListAdmin
+--
+-Mover
+-limit:int
+-startpage:int
+-endpage:int
+-maxpage:int
+-count:int
+-list:ArrayList
+--
++operate(Command's parameter);Mover
+DAO.memberList(startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3178</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3297</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberDetailAdmin
+--
+-Mover
+-id:String
+--
++operate(Command's parameter);Mover
+DAO.memberDetailAdmin(id);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3472</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>MemberModifyAdmin
+--
+-Mover
+-password:String
+-grade:String
+-position:String
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.memberModifyAdmin(Map);VO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3367</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3542</x>
+      <y>875</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1554</x>
+      <y>1057</y>
+      <w>2029</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>2016;21;2016;56;21;56;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1967</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2135</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2310</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2492</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2667</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2849</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3017</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3185</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3374</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1400</x>
+      <y>1092</y>
+      <w>188</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>56;98;21;98;21;21;175;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1568</x>
+      <y>1057</y>
+      <w>2834</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange
+</panel_attributes>
+    <additional_attributes>2821;70;2016;70;21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3388</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1876</x>
+      <y>1106</y>
+      <w>34</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1778</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3563</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2863</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3031</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3199</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1946</x>
+      <y>1407</y>
+      <w>98</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+WebTemplate
+--
+login
+membership
+search ID,PW
+--
+logout
+MemberDetail
+--
+MemberListAdmin
+--
+고객센터
+장바구니
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1869</x>
+      <y>1330</y>
+      <w>125</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=blue</panel_attributes>
+    <additional_attributes>21;21;21;56;112;56;112;77</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1582</x>
+      <y>1057</y>
+      <w>419</w>
+      <h>363</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=blue</panel_attributes>
+    <additional_attributes>406;350;406;84;21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1764</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1792</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1967</x>
+      <y>1057</y>
+      <w>2449</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>2436;21;2436;84;1631;84;21;84</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2107</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_Membership
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1967</x>
+      <y>1456</y>
+      <w>195</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;77;21;91;182;91;182;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2212</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_MemberOut
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2317</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_SearchID
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2128</x>
+      <y>1456</y>
+      <w>139</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;21;91;126;91;126;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2422</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_SearchPassword
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2226</x>
+      <y>1456</y>
+      <w>153</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;21;91;140;91;140;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2331</x>
+      <y>1456</y>
+      <w>160</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;21;91;147;91;147;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2632</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_MemberModify
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2737</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_MemberDetail
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2527</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_Zipcode
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2142</x>
+      <y>1456</y>
+      <w>433</w>
+      <h>118</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>420;21;420;105;21;105;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1757</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1946</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2121</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2296</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2478</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2996</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2828</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2653</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3164</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3353</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3528</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1393</x>
+      <y>805</y>
+      <w>181</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;63;21;63;98;168;98</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2457</x>
+      <y>1456</y>
+      <w>342</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;203;91;329;91;329;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2653</x>
+      <y>1456</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;77;147;77;147;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2555</x>
+      <y>1456</y>
+      <w>125</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;77;112;77;112;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2681</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2506</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2324</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1981</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2149</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2107</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1946</x>
+      <y>1281</y>
+      <w>195</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;182;21;182;91;182;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1995</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2163</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2338</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2520</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2695</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2877</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3045</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3213</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3402</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2842</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_MemberListAdim
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2765</x>
+      <y>1456</y>
+      <w>153</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;140;91;140;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1085</x>
+      <y>175</y>
+      <w>189</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>create table Member(
+member_index int unsigned,
+member_id varchar(20) not null,
+member_password varchar(20) not null,
+member_name varchar(20) not null,
+member_age int(3) unsigned not null,
+member_jender int unsigned not null,
+member_email1 varchar(20) ,
+member_email2 varchar(10) ,
+member_jumin1 int unsigned not null,
+member_jumin2 int unsigned not null,
+member_phoneNum varchar(20) not null,
+member_phoneNum2 varchar(20) not null,
+member_zipcode varchar(15) not null,
+member_address1 varchar(70) not null,
+member_address2 varchar(70) not null,
+member_admin int,
+member_grade int not null,
+member_position not null,
+member_joinDate date,
+primary key(member_id));</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1295</x>
+      <y>175</y>
+      <w>189</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>create table Zipcode(
+id varchar(20),
+zipcode varchar(7),
+sido varchar(4),
+gugun varchar(13),
+dong varchar(24),
+ri varchar(36),
+bunji varchar(17)
+primary key(id))
+
+group=24</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1295</x>
+      <y>287</y>
+      <w>98</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>id &gt;&gt; 해당아이디의 주수
+zipcode &gt; 우편번호
+sido &gt;&gt; 시/도
+gugun &gt;&gt; 구/군
+dong &gt;&gt; 동
+ri &gt;&gt; 리/아파트 등
+bunji &gt;&gt; 번지
+
+group=24</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1330</x>
+      <y>91</y>
+      <w>231</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>alter table *foods* add foreign key(seller)
+reference Member(id)
+on update cascade on delete cascade;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3647</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FoodDetail
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.foodsDetail(Map);VO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1498</x>
+      <y>175</y>
+      <w>189</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>create table Food(
+index int unsigned,
+name varchar(30),
+storeName varchar(30),
+seller varchar(20),
+price int unsigned,
+stock int unsigned,
+zipcode varchar(15),
+nutrition varchar(500),
+uploadDate date,
+classifition1 varchar(20),
+classifition2 varchar(20),
+explanation varchar(500)
+primary key(seller))</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>609</x>
+      <y>707</y>
+      <w>161</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>FoodVO
+--
+-index:int
+-name:String
+-storeName:String
+-seller:String
+-stock:int
+-price:int
+-zipcode:String
+-nutrition:String
+-uploadDate:Date
+-classification1:String
+-classification2:String
+-explanation:String
+--
++get();
++set();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>609</x>
+      <y>959</y>
+      <w>161</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>storeName 가게명
+classification 1,대분류 2,소분류
+nutrition 영양
+explanation 설명
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>700</x>
+      <y>553</y>
+      <w>300</w>
+      <h>167</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>287;21;259;21;21;21;21;154</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>609</x>
+      <y>609</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+Foods
+
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>616</x>
+      <y>616</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>840</x>
+      <y>665</y>
+      <w>34</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>21;42;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1085</x>
+      <y>91</y>
+      <w>231</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>alter table *board* add foreign key(id)
+reference Member(id)
+on update cascade on delete cascade;
+
+&gt;&gt; ex) board의 id는 Member의 id 를 참조하고있다
+Member의 id가 삭제될시  같이 삭제됨</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1085</x>
+      <y>0</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>DB Table
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>735</x>
+      <y>301</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Interface
+Annotation
+bg=red
+group=25</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>735</x>
+      <y>336</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Servlet
+bg=blue
+group=25</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>735</x>
+      <y>406</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>class
+
+group=25</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>735</x>
+      <y>371</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Data Base
+bg=gray
+group=25</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3822</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FoodAdd
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.foodAdd(Map);
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3997</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FooddDelete
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.fooddDelete(name);
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4172</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FoodModify
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.foodModify(FoodVO);
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4347</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FoodListSeller
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.foodListSeller(seller);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3577</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3682</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3864</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4032</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4200</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3549</x>
+      <y>1057</y>
+      <w>139</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>126;21;126;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3654</x>
+      <y>1057</y>
+      <w>209</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>196;21;196;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3836</x>
+      <y>1057</y>
+      <w>202</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>189;21;189;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4004</x>
+      <y>1057</y>
+      <w>202</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>189;21;189;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4172</x>
+      <y>1057</y>
+      <w>216</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>203;21;203;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3668</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3843</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4018</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4186</x>
+      <y>1057</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4368</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3703</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3864</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4032</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4200</x>
+      <y>882</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4361</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2996</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_FoodDetail
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3101</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_AddFood
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3206</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_DeleteFood
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3311</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_FoodModify
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3416</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_FoodListSeller
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2884</x>
+      <y>1456</y>
+      <w>587</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;574;91;574;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3045</x>
+      <y>1456</y>
+      <w>412</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;63;308;63;399;63;399;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3024</x>
+      <y>1456</y>
+      <w>335</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;70;322;70;322;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3227</x>
+      <y>1456</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4522</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FoodList
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.foodLis(claasification1,classification2,startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3528</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_FoodList
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3682</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_addBulletin
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4102</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_BasketList
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3437</x>
+      <y>1456</y>
+      <w>398</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;385;91;385;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3325</x>
+      <y>1456</y>
+      <w>405</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;70;105;70;392;70;392;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3696</x>
+      <y>1456</y>
+      <w>125</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;70;112;70;112;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3892</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_detailBulletin
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3787</x>
+      <y>1456</y>
+      <w>132</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;70;119;70;119;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3997</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_Inquiry
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3885</x>
+      <y>1456</y>
+      <w>146</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;70;133;70;133;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>3787</x>
+      <y>1442</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JSP&gt;&gt;
+--
+Veiw_modifyBulletin
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3997</x>
+      <y>1456</y>
+      <w>153</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;70;140;70;140;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3801</x>
+      <y>1456</y>
+      <w>363</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;350;91;350;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3535</x>
+      <y>1456</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;91;21;91;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3325</x>
+      <y>1456</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3136</x>
+      <y>1456</y>
+      <w>34</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3549</x>
+      <y>1456</y>
+      <w>34</w>
+      <h>83</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=gray</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6811</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Payment
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.payment(
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6986</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>PaymentBar
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4697</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BulletinAdd
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.bulletinAdd(Map);DTO
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>7266</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BasketList
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.FoodLis(claasification1,classification2,startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue
+group=26</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>7791</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BasketModifiy	(increase &amp; decrease )
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.FoodLis(claasification1,classification2,startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue
+group=26</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>7441</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>AddBasket
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.FoodLis(claasification1,classification2,startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue
+group=26</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>7616</x>
+      <y>728</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>DeleteBasket
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.FoodLis(claasification1,classification2,startpage,endpage,limit);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue
+group=26</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5565</x>
+      <y>1225</y>
+      <w>259</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>DAO
+--
+--
++logIn(String id,password,HttpSession session); boolean
+-loginKeep(String keep);boolean
+-isAdmin(int position);boolean
+-isSeller(int position); boolean
+-idCheck(id);boolean
++logOut(String id,HttpSession session); boolean
++addMember(Map);boolean
++delteMember(String id,String password);
++searchID(name,jumin),(name,email),(name,phoneNum);id
++searchPassword(id,name,jumin),(id,name,email),(id,name,phoneNum);password
++searchZipcode(zipcode);zipcode
++memberListAdmin(startpage,endpage,limit);MemberVO -&gt;Arraylist
++memberDetailAdmin(id);MemberVO
++memberModifyAdmin(map);MemberVO
++addFood(Map);
++deleteFood(name);
++foodDetail(index);FoodVO
++foodModify(FoodVO);
++foodListSeller(seller);FoodVO
++foodList(classification1,classification2,startpage,endpage,limit);FoodVO
++paymendt(
++paymentbar(
++review(index,startpage,endpage);DTO
++inquiry(index,startpage,endpage);DTO
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2219</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2331</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2443</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2555</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2667</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2779</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;91;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2891</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3003</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3115</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3227</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3339</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3451</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3563</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3675</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3787</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3899</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4011</x>
+      <y>1281</y>
+      <w>146</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=cyan</panel_attributes>
+    <additional_attributes>21;21;133;21;133;161</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>441</x>
+      <y>707</y>
+      <w>161</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>BulletinVO
+--
+-index:int
+-writer:String
+-title:String
+-content:String
+-wDate:Date
+-comment:ArrayList&lt;CommentVO&gt;
+-state:int
+--
++get();
++set();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>441</x>
+      <y>833</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>wDate &gt;&gt; 작성 날짜
+comment &gt;&gt; 게시글에 달린 댓글
+state &gt;&gt; 1.review 2,inquiry</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>490</x>
+      <y>609</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+BulletinVO
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>504</x>
+      <y>616</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>462</x>
+      <y>665</y>
+      <w>202</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>21;42;21;21;189;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>273</x>
+      <y>707</y>
+      <w>161</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>CommentVO
+--
+-index:int
+-writer:String
+-content:String
+-wDate:Date
+-isSubComment:boolean
+-comment:ArrayList&lt;CommentVO&gt;
+-state:int
+--
++get();
++set();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>273</x>
+      <y>833</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>isSubComment &gt;&gt; 
+댓글의 댓글인지 확인
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>322</x>
+      <y>609</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+CommentVO
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>329</x>
+      <y>616</y>
+      <w>34</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>21;21;21;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>371</x>
+      <y>665</y>
+      <w>118</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>21;42;21;21;105;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>4872</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BulletinDelete
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.bulletinDelete(index,state);DTO
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5047</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BulletinModify
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.bulletinModify(Map);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5747</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CommentDelete
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.commentDelete(index,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5572</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CommentAdd
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.commentAdd(Map);DTO
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5922</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CommentModify
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.commentModify(Map);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5222</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BulletinList
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.bulletinList(startpage,endpage,limit,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6097</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>CommentList
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.commentList(startpage,endpage,limit,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6622</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>InquiryModify
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.inquiryModify(Map);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6447</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>InquiryDelete
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.inquiryDelete(index,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6272</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>InquiryAdd
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.inquiryA(Map);DTO
+Mover.setRedirect(true);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6797</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>InquiryList
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.inquiryList(startpage,endpage,limit,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4767</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4956</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5131</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5306</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5663</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6181</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6013</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5838</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6349</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6538</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6713</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4536</x>
+      <y>882</y>
+      <w>2198</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>2184;21;686;21;21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4753</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4942</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5117</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5292</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5649</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6167</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5999</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5824</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6335</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6524</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6699</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6874</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4550</x>
+      <y>875</y>
+      <w>2023</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>2009;21;686;21;21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4368</x>
+      <y>882</y>
+      <w>203</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;189;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1540</x>
+      <y>882</y>
+      <w>2855</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>2842;21;686;21;21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3542</x>
+      <y>875</y>
+      <w>216</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;203;21;203;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4473</x>
+      <y>875</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;98;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4284</x>
+      <y>875</y>
+      <w>217</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;203;21;203;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4095</x>
+      <y>875</y>
+      <w>216</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;203;21;203;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3913</x>
+      <y>875</y>
+      <w>216</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;203;21;203;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>3724</x>
+      <y>875</y>
+      <w>216</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;203;21;203;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6538</x>
+      <y>875</y>
+      <w>210</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;196;21;196;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4767</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4935</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5110</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5292</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5642</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5824</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5992</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6160</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6349</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4368</x>
+      <y>1106</y>
+      <w>2653</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=orange
+</panel_attributes>
+    <additional_attributes>2639;21;2016;21;21;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6363</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4578</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6538</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5838</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6006</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6174</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4564</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4592</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4767</x>
+      <y>1120</y>
+      <w>2268</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>2254;21;1631;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5656</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5306</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5124</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4781</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4949</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4795</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4963</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5138</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5320</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5670</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5852</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6020</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6188</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6377</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6552</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6657</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6839</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6524</x>
+      <y>1057</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>126;21;126;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6629</x>
+      <y>1057</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>196;21;196;56;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6643</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6818</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=orange</panel_attributes>
+    <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4354</x>
+      <y>1092</y>
+      <w>2247</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>2233;21;2016;21;21;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>4382</x>
+      <y>1120</y>
+      <w>420</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue</panel_attributes>
+    <additional_attributes>406;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6524</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>5397</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>BulletDetail
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.bulletDetail(startpage,endpage,limit,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5439</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+group=27</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5453</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange
+group=27</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5467</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue
+group=27</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6972</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+group=29</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6986</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-
+fg=orange
+group=29</panel_attributes>
+    <additional_attributes>21;70;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>7000</x>
+      <y>1057</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=blue
+group=29</panel_attributes>
+    <additional_attributes>21;84;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5446</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>5460</x>
+      <y>875</y>
+      <w>35</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6713</x>
+      <y>875</y>
+      <w>210</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;196;21;196;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6699</x>
+      <y>882</y>
+      <w>210</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;196;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>6972</x>
+      <y>938</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>InquiryDetail
+--
+-Mover
+-map:Map
+--
++operate(Command's parameter);Mover
+DAO.inquiryDetail(startpage,endpage,limit,state);DTO
+Mover.setRedirect(false);
+Mover.setPath(
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6888</x>
+      <y>875</y>
+      <w>210</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;196;21;196;63</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>7049</x>
+      <y>882</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;21;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6874</x>
+      <y>882</y>
+      <w>210</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=pink</panel_attributes>
+    <additional_attributes>21;21;196;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>6804</x>
+      <y>1092</y>
+      <w>203</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.
+group=29</panel_attributes>
+    <additional_attributes>189;21;21;21</additional_attributes>
+  </element>
+</diagram>

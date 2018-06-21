@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>296</y>
+      <w>368</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Utils::ConnectDB
+--
+-DBsource = ReadXml.getKeys(ReadXml.getKeys("DB-name")): String
+-ds = null: DataSource
+-conn = null: Connection
+--
++ConnectCon(): Connection
++commit(Connection conn): void
++rollback(Connection conn): void
+--
+
+group=5
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>640</y>
+      <w>616</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Utils::Method_Shorten
+--
+--
++setterMethod(ResultSet rs, Object obj): Object
++setterMethod(MultipartRequest multi, Object obj): Object
++setterMethod(HttpServletRequest request, Object obj): Object
+-gsMethod(Object obj, String me): List&lt;Method&gt;
++insertData(Object obj): String
+-getType(Object obj): Object
+-reInt(Object obj): int
+-reFloat(Object obj): Float
+-reString(Object obj): String
++modifyData(String[] cols, Map&lt;String, Object&gt; map, String condition, String table): String
++ListData(String[] whes, HashMap&lt;String, Object&gt; whe, String[] ords, HashMap&lt;String, Object&gt; ord, String table): String
++ListCountData(String[] whes, HashMap&lt;String, Object&gt; whe, String table): String
++SearchData(String[] cols, Map&lt;String, Object&gt; map, String table, String dat): String
+--
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1408</x>
+      <y>912</y>
+      <w>272</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Listener&gt;
+Utils::ReadXml
+--
+-path = Xml/Mysource.xml : String
+--
++*setDB() : void
++*getKeys(String key) : String
++contextInitialized(ServletContextEvent sce) : void
++contextDestroyed(ServletContextEvent sce) : void
+--
+bg=orange
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>424</y>
+      <w>272</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Utils::GetAnnObj
+--
+-*reflection = null;Reflections 
+-*list1 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list2 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list3 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list4 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list5 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list6 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list7 = null:Set&lt;Class&lt;?&gt;&gt; 
+-*list8 = null:Set&lt;Class&lt;?&gt;&gt; 
+--
++*getObj(String command): Object
+-*makeRF(String command):void
+-*makeObj(String command,Set&lt;Class&lt;?&gt;&gt; list):Object
+--
+group=6
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>192</y>
+      <w>272</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Utils::ConnectDB_xml
+--
+-*path = src/main/webapp/Xml/Mysource.xml: String
+--
+-*readSource(): String
++setDB(): void
+--
+
+group=4
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>912</y>
+      <w>448</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Data_source::Action
+--
+--
++execute(HttpServletRequest request, HttpServletResponse response): ActionForward
+--
+
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>872</y>
+      <w>160</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Data_source::ActionForward
+--
+-isRedirect = false: boolean
+-path = null: String
+--
++isRedirect(): boolean
++getPath(): String
++setRedirect(boolean b): void
++setPath(String string): void
+--
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>744</y>
+      <w>408</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Servlet&gt;&gt;
+Data_source::Controller
+--
+-serialVersionUID = 1L: long
+--
+#doProcess(HttpServletRequest request, HttpServletResponse response): void
+#doGet(HttpServletRequest request, HttpServletResponse response): void
+#doPost(HttpServletRequest request, HttpServletResponse response): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>40</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Data_source::Data_inserter
+--
+-stmt: Statement
+-conn: Connection
+--
++main(String[] args): void
+-getID(Statement stmt): int
+--
+
+group=3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>336</y>
+      <w>616</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>Data_source::Main_DAO
+--
+-conn: Connection
+-stmt: Statement
+-rs: ResultSet
+-info2 = ReadXml.getKeys("MS_Condition2"): String
+-info3 = ReadXml.getKeys("MS_Condition3"): String
+-info5 = ReadXml.getKeys("MS_Condition1"): String
+--
+-discon(): void
+-Connect(): void
++getDAO(): Main_DAO
++ListCountCommand(String table, HashMap&lt;String, Object&gt; whe): int
++ListSequenceCommand(String table, int kind): int
++ListCommand(String obj, HashMap&lt;String, Object&gt; whe, HashMap&lt;String, Object&gt; ord, int page, int limit): List&lt;Object&gt;
++DetailCommand(Object obj, int num): Object
++InsertCommand(Object obj): boolean
++ModifyCommand(Map&lt;String, Object&gt; map, String table, String condition): boolean
++DeleteCommand(String table, int num, String condition): boolean
++CountUpdateCommand(String table, String condition, String condition2, int val, int num): void
++LoginCommand(String id, String pass, HttpSession session): int
++getInfo(String id, HttpSession session): void
++getMax(String table): int
++getColumns(String table): ArrayList&lt;String&gt;
++getLastInsert(): int
++SearchData(Map&lt;String, Object&gt; map, String table, String dat): String
+--
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>824</y>
+      <w>248</w>
+      <h>648</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Data_source::USER
+--
+--
++setINFO_INDEX(int n): void
++setINFO_ID(String s): void
++setINFO_PASSWORD(String s): void
++setINFO_PHONENUM(String s): void
++setINFO_NAME(String s): void
++setINFO_MILEAGE(int n): void
++setINFO_DONATION(int s): void
++setINFO_EMAIL(String s): void
++setINFO_JOINDATE(Date d): void
++setINFO_PERMIT(String s): void
++setINFO_BIRTH(String s): void
++setINFO_GRADE(int i): void
++setINFO_POSITION(String s): void
++setINFO_ADDBOARD_RG(String s): void
++setINFO_DELBOARD_RG(String s): void
++setINFO_MODBOARD_RG(String s): void
++setINFO_ADDSTORE_RG(String s): void
++setINFO_DELSTORE_RG(String s): void
++setINFO_MODSTORE_RG(String s): void
++setINFO_ADDCOMMENT_RG(String s): void
++setINFO_DELCOMMENT_RG(String s): void
++setINFO_MODCOMMENT_RG(String s): void
++setINFO_MODINFO_RG(String s): void
++getINFO_INDEX(): int
++getINFO_ID(): String
++getINFO_PASSWORD(): String
++getINFO_PHONENUM(): String
++getINFO_NAME(): String
++getINFO_MILEAGE(): int
++getINFO_DONATION(): int
++getINFO_EMAIL(): String
++getINFO_JOINDATE(): Date
++getINFO_PERMIT(): String
++getINFO_BIRTH(): String
++getINFO_GRADE(): int
++getINFO_POSITION(): String
++getINFO_ADDBOARD_RG(): String
++getINFO_DELBOARD_RG(): String
++getINFO_MODBOARD_RG(): String
++getINFO_ADDSTORE_RG(): String
++getINFO_DELSTORE_RG(): String
++getINFO_MODSTORE_RG(): String
++getINFO_ADDCOMMENT_RG(): String
++getINFO_DELCOMMENT_RG(): String
++getINFO_MODCOMMENT_RG(): String
++getINFO_MODINFO_RG(): String
+--
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1488</x>
+      <y>360</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1024</x>
+      <y>952</y>
+      <w>400</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>480.0;10.0;250.0;10.0;250.0;290.0;10.0;290.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1488</x>
+      <y>448</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1424</x>
+      <y>664</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>220.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>1048</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=1
+bg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>1056</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=1
+bg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>840</y>
+      <w>56</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+create</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>792</y>
+      <w>176</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+create</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>1048</y>
+      <w>336</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Action_Class
+--
++execute(HttpServletRequest request, HttpServletResponse response): ActionForward
+--
+
+group=1
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>976</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>992</y>
+      <w>352</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+create</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0;420.0;190.0;420.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1048</x>
+      <y>664</y>
+      <w>144</w>
+      <h>496</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+create</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;600.0;10.0;600.0;10.0;550.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>1216</y>
+      <w>192</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Bean_Class
+--
+--
+getter
+setter
+--
+
+group=2
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>1248</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2
+bg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>1240</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=2
+bg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>1288</y>
+      <w>512</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=blue</panel_attributes>
+    <additional_attributes>10.0;90.0;620.0;90.0;620.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>1096</y>
+      <w>56</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+create</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1216</x>
+      <y>664</y>
+      <w>24</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1600</x>
+      <y>0</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>테스트 데이터를
+넣는 클래스
+group=3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1600</x>
+      <y>152</y>
+      <w>272</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Mysource.xml에 있는 정보를 읽어들여서
+web.xml. 과 context.xml을 변경시키는 클래스
+group=4
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1968</x>
+      <y>296</y>
+      <w>64</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ReadXml을 통해 Mysource.xml에 있는 정보를 읽어들여서
+DB에 접속하는 클래스
+group=5
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1872</x>
+      <y>424</y>
+      <w>160</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>어노테이션을
+활용하여 필요한 객체를
+만들어서 리턴시키는 클래스
+group=6
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1672</x>
+      <y>352</y>
+      <w>608</w>
+      <h>624</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;760.0;740.0;760.0;740.0;10.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1864</x>
+      <y>216</y>
+      <w>416</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;500.0;10.0;500.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2208</x>
+      <y>744</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1408</x>
+      <y>1072</y>
+      <w>128</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Xml&gt;&gt;
+Xml::Mysource
+--
+거의모든 정보가 
+입력 되어있는 XML
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1464</x>
+      <y>1024</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1144</x>
+      <y>1232</y>
+      <w>216</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Annotation&gt;&gt;
+(패키지명)_path
+--
+Action클래스,Bean클래스 들이
+이 Annotation을 구현하면
+GetAnnObj클래스로 객체를 만들 수 있다
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>976</x>
+      <y>1096</y>
+      <w>184</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=blue</panel_attributes>
+    <additional_attributes>210.0;210.0;160.0;210.0;160.0;130.0;10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>992</x>
+      <y>1256</y>
+      <w>128</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.
+fg=blue</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;90.0;10.0;90.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1408</x>
+      <y>888</y>
+      <w>272</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Mysource.xml을 읽어들이는 클래스
+bg=orange
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>672</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>CLASS
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>720</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ANNOTATION
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>624</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>LISTENER
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>576</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>INTERFACE
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>528</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>SERVLET
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>224</x>
+      <y>480</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>XML
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>344</x>
+      <y>480</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>
+객체생성,파라미터,리턴 등을
+사용했다는 뜻
+
+
+
+interface,annotation 을
+구현 했다는 뜻
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>528</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+group=8</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>600</y>
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+group=8</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>

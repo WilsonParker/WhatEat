@@ -1,0 +1,5 @@
+<Context>
+
+	<Resource name="jdbc/webdbpool" auth="Container" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/TeamAh" username="Team_Ah" password="dk1234" driverClassName="com.mysql.jdbc.Driver" maxActive="10" maxIdle="2" closedMethod="close" />
+	<Manager className="org.apache.catalina.session.StandardManager" pathname="" />
+</Context>

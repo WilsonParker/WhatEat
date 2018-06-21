@@ -1,0 +1,16 @@
+﻿#wrap_list {width:100%; background:#f4ebdd;}
+#body_list {max-width:960px; padding-bottom:20px;}
+#body_list #adress_list {font-size:0.9em; padding:15px 15px 0px 15px; }
+
+#body_list #box_wrap_list {overflow:hidden;}
+#body_list #box_wrap_list .box_list {float:left; border:1px solid #dad3c7; background:#ffffff; width:290px;
+									 margin:15px; padding:15px; overflow:hidden; position:relative;}
+#body_list #box_wrap_list .box_list .photo_list {border:1px solid #dad3c7; height:100px; width:100px; position:absolute; left:50%; margin-left:-130px;}
+#body_list #box_wrap_list .box_list .subject_list {padding-left:110px; font-size:1.2em; min-height:50px;}
+#body_list #box_wrap_list .box_list .star_list {padding-left:110px; padding-top:5px; font-size:1.2em;}
+#body_list #box_wrap_list .box_list .review_list {padding-left:110px; padding-top:5px; font-size:0.9em;}
+#body_list #box_wrap_list .box_list .banner_list {float:left; margin-top:20px; background:#3f3f3f; color:#ffffff;
+														   font-size:0.7em; padding:4px; }
+#body_list #box_wrap_list .box_list .banner_list:first-child {margin-left:110px;}
+#body_list #box_wrap_list .box_list .banner_list:first-child+div {margin-left:10px;}
+#body_list #box_wrap_list .box_list div {border:1px solid black;}

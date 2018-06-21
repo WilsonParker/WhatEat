@@ -1,0 +1,15 @@
+#wrapMP #wrap {width:100%;}
+
+#wrapMP #Header {display:none;}
+
+            /* Desktop Device */
+/*             @media all and (min-width:1025px) { */
+            @media all and (min-width:512px) {
+#wrapMP     #hearder {display:none;}
+
+            /* PC Header Start*/
+#wrapMP     #Header {display:block; width:100%; background-color:#3f3f3f; height:80px;}
+#wrapMP     .containHeader {max-width:100%; margin-top:30px; padding:20px 20px; text-align:center;}
+#wrapMP     .menu {display:inline-block; width:100px; height:40px; border:1px solid #ffffff; line-height:40px; text-align:center; color:#ffffff; margin-right:10px;}
+          /* PC Header End*/
+ }

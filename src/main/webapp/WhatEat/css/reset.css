@@ -1,0 +1,13 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+*{margin:0 auto; padding:0; box-sizing : border-box; font-family:nanumgothic;}
+
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption{ display:block; }
+
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:0px;}
+
+#Header a {color:#ffffff;}
+
+

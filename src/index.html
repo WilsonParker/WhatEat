@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Location</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	//document.onload = location.href="Home/View_Main.jsp";
+	$(function(){
+		$("#WhatEat").on("click",function(){ location.href="WhatEat/Home/View_Main.jsp"; })
+		$("#Binary_PHP").on("click",function(){ location.href="http://freedomdevel.kro.kr/Php_Demo1/exam2/calculator.php"; })
+	})
+</script>
+<style>
+	.d1{
+		width:300px;
+		height:150px; 
+		text-align:center;
+		border:1px solid black;
+		margin:30px 0px 0px 30px;
+		float:left;
+		background-color:#eeeeee;
+	}
+</style>
+</head>
+<body>
+
+	<div id="WhatEat"  class="d1">
+	(JSP, JAVA, HTML, JQUERY, MYSQL ...)<br/><br/>
+		<strong>WhatEat</strong><br/><br/>
+		<b>Explorer를 지원하지 않습니다</b>
+	</div>
+	
+	<div id="Binary_PHP"  class="d1">
+	(PHP, MYSQL)<br/><br/>
+		<strong>진법 계산기</strong><br/><br/>
+		<b>개인 컴퓨터로 서버를 돌려야 접근 가능합니다
+		항상 컴퓨터를 켜두지 않습니다</b>
+	</div>
+</body>
+</html>

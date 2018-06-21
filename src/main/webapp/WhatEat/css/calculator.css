@@ -1,0 +1,49 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {padding:0; margin:0; font-family:nanumgothic,Dotum; box-sizing : border-box; }
+
+li  {list-style:none;}
+a   {text-decoration:none; color:#3b3b3b;}
+img {border:0px;}
+
+#wrap    {margin: 0 auto; text-align:center; margin-top:30px; width:100%; max-width:1000px;}
+#wrap h2 {background-color:#fea1a1; height:30px; line-height:30px;}
+
+#wrap .title    {margin-top:30px; width:100%;}
+#wrap .title h3 {background-color:#6fd77d; height:30px; line-height:30px;}
+
+#wrap .title2    {width:100%;}
+#wrap .title2 h3 {height:30px; line-height:30px; background-color:#f6b54f;}
+#wrap .title2 h5 {height:20px; line-height:20px; background-color:#f6b54f;}
+
+
+#wrap .classify {width:100%; overflow:hidden; height:30px; line-height:30px; background-color:#d9d9d9;}
+#wrap .classify div:first-child {float:left; width:20%; background-color:#b2b2b2;}
+#wrap .classify div:last-child {float:left; width:80%;}
+
+#wrap .classify2 {width:100%; overflow:hidden; height:30px; line-height:30px; background-color:#d9d9d9;}
+#wrap .classify2 div:first-child {float:left; width:50%;}
+#wrap .classify2 div:last-child {float:left; width:50%;}
+
+#wrap .classify3 {width:100%; overflow:hidden; height:30px; line-height:30px; background-color:#d9d9d9;
+                         border-bottom:1px solid #b2b2b2;}  
+
+#wrap .classify3 div {float:left; width:33.3%; border-right:1px solid #b2b2b2;}
+
+
+.line {overflow:hidden; background-color:#d9d9d9;}
+.person {width:20%; float:left;}
+.person input {width:100%;}
+
+#output .line {overflow:hidden;}
+#output .line div{width:20%; float:left;}
+
+#input2 #wrap2 {overflow:hidden;}
+#input2 #wrap2 div {float:left; width:50%; border:1px solid #000000; height:30px; line-height:30px;}
+
+#inputBtn {margin:15px 0;}
+#inputBtn button {padding:5px;}
+
+#output .line div:first-child {background-color:#b2b2b2;}
+
+.exception {font-weight:bold; background-color:#ffd800;}

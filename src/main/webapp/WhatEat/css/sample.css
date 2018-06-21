@@ -1,0 +1,29 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {padding:0; margin:0; box-sizing : border-box; border-collapse : collapse; color:#3b3b3b; 
+   font-family:nanumgothic,Dotum;}
+li{list-style:none;}
+a{text-decoration:none; color:#3b3b3b;}
+img{border:0px;}
+
+#wrap {width:95%; margin:10px auto; text-align:center;}
+
+#header {max-width:950px; height:110px; padding:30px 0; margin:0 auto;
+         text-align:center;}
+
+#nav {max-width:950px; margin:5px auto; text-align:left; }
+#nav ul {margin:0 auto; background-color:#f6f6f6; border:1px solid #d8d8d8; border-bottom:0px;}
+#nav ul li {font-size:0.8em; width:100%; height:35px; line-height:35px;
+             border-bottom:1px solid #d8d8d8;}
+#nav ul li a {padding-left:15px; display:block;}
+#nav ul li:first-child { cursor:pointer;}
+
+#section {margin:40px 0;}
+#section img {width:100%; max-width:950px;}
+
+#nav2 {max-width:950px; margin:5px auto; text-align:left; }
+#nav2 ul {margin:0 auto; background-color:#f6f6f6; border:1px solid #d8d8d8; border-bottom:0px;}
+#nav2 ul li {font-size:0.8em; width:100%; height:35px; line-height:35px;
+             border-bottom:1px solid #d8d8d8;}
+#nav2 ul li a {padding-left:15px; display:block;}
+#nav2 ul li:first-child { cursor:pointer;}

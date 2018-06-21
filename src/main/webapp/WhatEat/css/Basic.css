@@ -1,0 +1,92 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+*{margin:0 auto; padding:0; box-sizing : border-box; font-family:nanumgothic;}
+
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption{ display:block; }
+
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:0px;}
+
+#Header a {color:#ffffff;}
+
+ #wrap {width:100%;}
+
+        #Header {display:none;}
+        #gps_barPC {display:none;}
+
+        #gps_bar {width:100%; text-align:center; background-color:#3f3f3f; height:35px; line-height:35px; overflow:hidden;}
+        #gps_bar #contain1 {max-width:960px;}
+        #gps_bar p {color:#ffffff; font-size:0.8em; padding:0 10px;}
+        .tdL{float:left;}
+        .tdR{float:right; }
+
+        #hearder {width:100%; text-align:center; position:relative; border-bottom:1px solid #cccccc;}
+        #hearder #contain2 {max-width:960px;}
+
+        /* div 가운데 놓는 기술 */
+        /* 1. 부모 요소에 position:relative; + 해당 요소에 position:absolute;
+           2. 해당 요소에 left:50% + width:200px;(임의의 길이 지정) + margin-left:-(width/2)(가로 길이의 절반) */
+        #logo {position:absolute; top:15px; left:50%; width:200px; margin-left:-100px;}
+
+        #logo_bar {height:50px; line-height:50px; }
+        .menu_bt {padding:0 10px;}
+
+        #body {width:100%; background-color:#fafafa; padding-bottom:25px;}
+        #body #contain3 {max-width:960px; overflow:hidden;}
+        .tr {overflow:hidden;}
+        .tdLeft50 {float:left; width:50%; padding:10px 5px 0 10px;}
+        .tdRight50 {float:left; width:50%; padding:10px 10px 0 5px;}
+
+        .box {background-color:#ffffff; height:220px; border:1px solid #cccccc; position:relative;}
+        .box div {width:100%; height:218px; padding:15px;}
+        .box img {position:absolute; right:0px;}
+
+        #footer {background-color:#ededed;height:230px;}
+        #footer #containFooter {max-width:960px; padding-top:20px;}
+        .trFooter {overflow:hidden; padding-left:10px;}
+
+
+
+        /* Tablet Device */
+        @media all and (min-width:768px) and (max-width:1024px) {
+
+        }
+
+        /* Desktop Device */
+/*         @media all and (min-width:1025px) { */
+        @media all and (min-width:512px) {
+            #gps_bar {display:none;}
+            #hearder {display:none;}
+
+            /* PC Header Start*/
+            #Header {display:block; width:100%; background-color:#3f3f3f; height:80px;}
+            .containHeader {max-width:960px; overflow:hidden; padding-top:20px;}
+            .leftHeader {float:left; padding-top:10px; color:#ffffff; margin-left:10px;} 
+            .rightHeader {float:right; width:100px; height:40px; border:1px solid #ffffff; line-height:40px; text-align:center; color:#ffffff; margin-right:10px;}
+            /* PC Header End*/
+
+            #gps_barPC {display:block; width:100%; height:250px;}
+            .containPC2 {max-width:960px; text-align:center; margin:0 auto; padding-top:50px; position:relative;}
+            .containPC2 h1 {color:#ffffff;}
+            .containPC2 p {color:#ffffff; line-height:30px;}
+            .containPC2 .search {width:300px; height:40px; border:1px solid #000000; background:#ffffff; position:absolute; left:50%; margin-left:-175px;}
+            .containPC2 .bt {width:50px; height:40px; border:1px solid #000000; background:#3f3f3f; line-height:40px; color:#ffffff; position:absolute; left:50%; margin-left:130px;}
+            .containPC2 input {border:0px; width:100%; padding:0 10px; margin-top:10px;}
+
+            #body {width:100%; background-color:#fafafa; padding-bottom:25px;}
+            #body #contain3 {max-width:960px; overflow:hidden;}
+            .td25_1 {float:left; width:25%; padding:10px 5px 0 10px;}
+            .td25_2_3 {float:left; width:25%; padding:10px 5px 0 5px;}
+            .td25_4 {float:left; width:25%; padding:10px 10px 0 5px;}
+
+            .box {background-color:#ffffff; height:220px; border:1px solid #cccccc; position:relative;}
+            .box div {width:100%; height:218px; padding:15px;}
+            .box img {position:absolute; right:0px;}
+
+            /* PC Footer Start*/
+            #footer {background-color:#ededed;height:230px;}
+            #footer #containFooter {max-width:960px; padding-top:20px;}
+            .trFooter {overflow:hidden; padding-left:10px;}
+            /* PC Footer End*/
+}

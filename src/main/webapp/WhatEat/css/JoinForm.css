@@ -1,0 +1,22 @@
+﻿ @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+      #wrapJ {width:100%; background-color:#fafafa;}
+
+      #wrapJ .topPadding {width:90%; max-width:500px; height:20px;}
+      #wrapJ #contain {width:90%; max-width:500px; background-color:#ffffff; border:1px solid #000000; padding:30px;}
+      #wrapJ .bottomPadding {width:90%; max-width:500px; height:20px;}
+
+      #wrapJ .title {padding-top:15px;}
+      #wrapJ .input {height:30px; border:1px solid #cccccc; margin:8px 0; padding:0 8px;}
+      #wrapJ .input input {width:100%; border:0px; margin-top:6px;}
+
+      #wrapJ .tr {overflow:hidden;}
+      #wrapJ .td_Button {float:left; width:49%; text-align:center; background-color:#948f88; color:#ffffff; padding:10px 0; font-size:0.7em;cursor:pointer;}
+      #wrapJ .tdR_Button {float:right; width:49%; text-align:center; background-color:#948f88; color:#ffffff; padding:10px 0; font-size:0.7em;cursor:pointer;}
+
+      #wrapJ .submit_Button {width:100%; text-align:center; background-color:#393939; color:#ffffff; padding:10px 0; font-size:0.8em; margin:20px 0px 10px 0px;}
+      #wrapJ .submit_Button a {width:100%; padding:10px 0; margin:20px 0px 10px 0px;}
+
+      #wrapJ .buttonFrom {display:inline; width:100%}
+      #wrapJ .button {display:inline; width:30; background-color:#555555;}
+      #wrapJ #tb td {min-width:60px;}

@@ -1,0 +1,52 @@
+﻿#wrap_det {width:100%; background:#f4ebdd;}
+#body_det {width:960px; padding-bottom:50px; overflow:hidden;}
+
+#adress_det {font-size:0.9em; padding:15px; }
+
+#box1_wrap_det {overflow:hidden; padding:0 15px; border:1px solid #c5beb2; background:#ffffff; width:100%; max-width:945px; margin-left:15px; margin-bottom:15px; height:50px; }
+.title_det {float:left; line-height:50px;}
+.star_det {float:left; padding-left:20px; line-height:50px;}
+.review_count_det{float:left;padding-left:10px; font-size:0.8em; line-height:50px;}
+.banner_det{float:right; background:#3f3f3f; color:#ffffff; font-size:0.7em; padding:4px; margin-left:6px; margin-top:15px;}
+
+#box2_wrap_det {width:100%; max-width:960px;}
+.nav_det{float:left; background:#ffffff; border:1px solid #c5beb2; margin-left:15px;}
+.nav_det ul {overflow:hidden; margin-bottom:30px; cursor:pointer;}/* width:700px; */
+.nav_det ul li {float:left; width:174px; text-align:center; height:60px; line-height:60px; color:#3f3f3f; cursor:pointer;}
+
+.owner_comment_det{margin:0 35px; margin-bottom:30px; display:hidden; text-align:center}
+.road_comment_det{margin:0 35px; margin-bottom:30px; display:hidden; text-align:center}
+.comment_det{padding:15px; font-size:0.9em; border:1px solid #dad3c7;}
+.comment_det>p{line-height:25px;}
+
+.classify_det {background:#3f3f3f; text-align:center; margin:20px 35px 30px 35px;}
+
+.classify_btn_det{overflow:hidden;}
+.classify_btn_det>div {float:left; width:50%; line-height:40px; background:#3f3f3f; color:#ffffff; border:1px solid #dedede; padding:0 15px; font-size:0.8em;}
+.classify_btn_det>div:first-child {text-align:left; border-right:0px;}
+.classify_btn_det>div:last-child {text-align:right; border-left:0px;}
+
+.classify_det>ul {overflow:hidden;}
+.classify_det>ul li {float:left; width:50%; line-height:40px; background:#ffffff; color:#000000; border:1px solid #dedede; padding:0 15px; font-size:0.8em;}
+.classify_det>ul li:first-child { text-align:left; border-right:0px; border-top:0px;}
+.classify_det>ul li:last-child { text-align:right; border-left:0px; border-top:0px;}
+
+.review_box_det {margin-bottom:35px; }
+.customer_review_det {margin-bottom:15px;}
+.customer_review_det>p {margin:0 35px; font-size:0.8em; margin-bottom:8px; font-family:Dotum;}
+.customer_review_det>p>b {font-family:Dotum; margin-right:10px; }
+
+.owner_review_det {margin:0 35px; background:#f4f2ee; padding:20px; border:1px solid #dfddda;}
+.owner_review_det>p {font-family:Dotum; font-size:0.8em; margin-bottom:8px;}
+.owner_review_det>p>b {font-family:Dotum; margin-right:10px;}
+
+.wrap_sidebar_det{float:right; width:230px;}
+
+.info_box_det{background:#ffffff; padding:15px; border:1px solid #c5beb2; margin-bottom:10px;}
+.title_sidebar_det{font-size:0.8em; padding-bottom:15px; font-family:Dotum;}
+.detail_sidebar_det .tr_det {overflow:hidden; }
+.detail_sidebar_det .td_det {float:left; font-size:0.8em; padding-top:5px; font-family:Dotum;}
+
+.bookmark_det{font-size:0.9em; color:#ffffff; background:#3f3f3f; text-align:center; height:40px; line-height:40px;}
+.edit_det{font-size:0.9em; color:#ffffff; background:#3f3f3f; text-align:center; height:40px; line-height:40px;}
+

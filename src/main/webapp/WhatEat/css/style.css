@@ -1,0 +1,10 @@
+﻿@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {padding:0; margin:0; font-family:nanumgothic,Dotum;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:0px;}
+
+#wrap {margin:0 auto; padding:100px 0; text-align:center;}
+#wrap table {margin:0 auto; text-align:center;}
+
